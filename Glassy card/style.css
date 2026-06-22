@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+main{
+    height: 100dvh;
+    width: 100%;
+    background-color: #020202;
+}
+main .card-bx{
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://images.unsplash.com/photo-1708549565671-730b21690df1?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+main .card-bx .card{
+    min-height: 8rem;
+    min-width: 16rem;
+    background-color: #ffffff20;
+    padding: 25px 30px;
+    border-radius: 24px;
+    border: 1px solid transparent;
+    border-top-color:rgba(255,255,255,0.1);
+    color: #fff;
+    gap: 1rem;
+    box-shadow:0px 15px 40px 0px rgba(0,0,0,0.15);
+    backdrop-filter: blur(12px);
+    cursor: pointer;
+    transition: 0.3s ease all;
+    outline: 2px solid transparent;
+}
+main .card-bx .card:hover .top .icon i{
+    scale: 1.8;
+    animation: slow-shake 0.5s ease infinite;
+}
+main .card-bx .card:hover{
+   border: 1px solid rgba(255, 255, 255, 0.25);
+   transform: translateY(-5px);
+   background-color: #ffffff3b;
+}
+
+@keyframes slow-shake{
+    0%{
+        transform: rotate(3deg);
+    }
+    50%{
+        transform: rotate(-3deg);
+    }
+    100%{
+        transform: rotate(3deg);
+    }
+}
+main .card-bx .card .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .card-bx .card .top h2{
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    line-height: 24px;
+}
+main .card-bx .card .top .icon{
+    height: 3rem;
+}
+main .card-bx .card .top .icon i{
+    font-size: 2rem;
+    transition: 0.3s ease;
+}
+main .card-bx .card .bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+main .card-bx .card .top .icon:hover i{
+    color: #ffa9af;
+}
+main .card-bx .card .bottom p{
+    font-family: "Inter Tight", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    width: 75%;
+    line-height: 16px;
+}
+main .card-bx .card .bottom button{
+    padding: 8px 12px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    width: 10rem;
+    cursor: pointer;
+    position: relative;
+    background-color: #70111183;
+    border-top: 1.5px solid rgba(255,255,255,0.1);
+    transition: 0.7s ease all;
+}
+main .card-bx .card .bottom button:hover{
+    background-color: #fff;
+    color: #020202;
+}
+main .card-bx .card .bottom button:active{
+    transform: scale(0.9);
+}
+main .card-bx .card .bottom button::before{
+    content: '';
+    height: 3px;
+    background-color: #D3000D;
+    height: 5px;
+    width: 0;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    transition: 0.5s ease;
+}
+main .card-bx .card .bottom button:hover::before{
+    width: 40%;
+}
+main .card-bx .card .bottom button::after{
+    content: '';
+    height: 3px;
+    background-color: #D3000D;
+    height: 5px;
+    width: 0;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transition: 0.5s ease;
+}
+main .card-bx .card .bottom button:hover::after{
+    width: 40%;
+}
+main .card-bx .card .bottom button:active::after,
+main .card-bx .card .bottom button:active::before{
+    transform: scale(0.5);
+    transition: 0.1s ease;
+}
